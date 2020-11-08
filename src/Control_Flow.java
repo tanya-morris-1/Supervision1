@@ -34,6 +34,9 @@ public class Control_Flow {
         int c = lowestCommon(14L, 25L);
         System.out.println(c);
 
+        int d = lowestCommon(100L, 33L);
+        System.out.println(d);
+
     }
 
 }
