@@ -12,7 +12,8 @@ public class Tail {
         }
     }
 
-    // Running this code results in a stack overflow, hence I believe that this shows Java does not support tail recursion optimisation.
+    // Running this code results in a stack overflow, hence I believe that this shows Java does not support tail
+    // recursion optimisation.
     // As an example of the stack, take i to be 1 initially, would look like:
     // recursion(1)
     // recursion(2)
