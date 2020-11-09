@@ -30,8 +30,8 @@ public class main {
 
         test_tree.add_value(1);
         test_tree.add_value(3);
-        int result = test_tree.traverse_tree_to_fetch_index(test_tree.root, 2);
-        System.out.println(result);
+        //int result = test_tree.traverse_tree_to_fetch_index(test_tree.root, 2);
+       // System.out.println(result);
 
     }
 }

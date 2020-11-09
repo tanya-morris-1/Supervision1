@@ -55,7 +55,7 @@ class BinaryTree {
     }
 
 
-    public int traverse_tree_to_fetch_index(BinaryTreeNode node, int index) {
+  /*  public int traverse_tree_to_fetch_index(BinaryTreeNode node, int index) {
         int to_return = 0;
         try {
             to_return = 0;
@@ -86,7 +86,7 @@ class BinaryTree {
     public String traverse_tree_index(BinaryTreeNode node, int index){
         if (index_to_pass != 0) {index_to_pass = 0;};
         return traverse_tree(node);
-    }
+    }  */
 
 
 
@@ -156,6 +156,21 @@ class FunctionalArray{
         for (int i = 0; i<size; i++){
             treeImplementation.add_value(0);
         }
+    }
+
+
+    int get(int index){
+        String s = treeImplementation.traverse_tree_1(treeImplementation.root);
+        String[] list_split = s.split(" ");
+        int to_return = 0;
+        int i = 0;
+        for (String element : list_split){
+            i++;
+            if (i == index) {
+                to_return = Integer.parseInt(element);
+            }
+        }
+        return to_return;
     }
 
 
