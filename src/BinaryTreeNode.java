@@ -54,6 +54,42 @@ class BinaryTree {
         return traverse_tree(node);
     }
 
+
+    public int traverse_tree_to_fetch_index(BinaryTreeNode node, int index) {
+        int to_return = 0;
+        try {
+            to_return = 0;
+            boolean found = false;
+            while (index_to_pass != index) {
+                traverse_tree(node.left);
+                index_to_pass += 1;
+                if (index_to_pass == index) {
+                    to_return = (node.mValue);
+                    found = true;
+                    break;
+                }
+                traverse_tree(node.right);
+            }
+            if (found == true) {
+                return to_return;
+            } else {
+                throw new Exception();
+            }
+        } catch (Exception e) {
+            System.out.println(e.getStackTrace());
+        }
+        return to_return;
+    }
+
+    int index_to_pass = 0;
+
+    public String traverse_tree_index(BinaryTreeNode node, int index){
+        if (index_to_pass != 0) {index_to_pass = 0;};
+        return traverse_tree(node);
+    }
+
+
+
     private BinaryTreeNode add_value_recursive(BinaryTreeNode node, int value){
         if (node == null){
             return new BinaryTreeNode(value);
@@ -111,4 +147,17 @@ class SearchSet {
         String[] list_split = list_of_el.split(" ");
         return list_split.length;
     }
+}
+
+class FunctionalArray{
+    BinaryTree treeImplementation = new BinaryTree();
+
+    FunctionalArray(int size) {
+        for (int i = 0; i<size; i++){
+            treeImplementation.add_value(0);
+        }
+    }
+
+
+
 }

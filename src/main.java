@@ -23,6 +23,15 @@ public class main {
         System.out.println(test_set.contains(12));
         System.out.println(test_set.getNumberElements());
 
+        FunctionalArray test_array = new FunctionalArray(3);
+
+        BinaryTree test_tree = new BinaryTree();
+
+
+        test_tree.add_value(1);
+        test_tree.add_value(3);
+        int result = test_tree.traverse_tree_to_fetch_index(test_tree.root, 2);
+        System.out.println(result);
 
     }
 }
